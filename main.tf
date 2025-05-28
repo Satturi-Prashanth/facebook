@@ -169,7 +169,7 @@ terraform {
 }
 
 resource "aws_s3_bucket" "tf_state" {
-  bucket = "my-terraform-state-bucket-12345" # Must be globally unique
+  bucket = "amsterdam-bucket" # Must be globally unique
 
   versioning {
     enabled = true
@@ -184,7 +184,7 @@ resource "aws_s3_bucket" "tf_state" {
   }
 
   tags = {
-    Name        = "Terraform State Bucket"
+    Name        = "amsterdam-bucket"
     Environment = "dev"
   }
 }
